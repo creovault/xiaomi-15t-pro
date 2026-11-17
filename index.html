@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Xiaomi 15T Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f2;--card:#fff;--ink:#14231c;--mute:#66756d;--line:#dfe5e0;--accent:#0f6b4f;--accent-soft:#e3f2ec;--done:#eef7f2;--warn:#b45309;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1612;--card:#16211b;--ink:#e8efea;--mute:#93a59b;--line:#263229;--accent:#4cc79a;--accent-soft:#17342a;--done:#142a21;--warn:#f0b35a}}
+:root[data-theme="dark"]{--bg:#0e1612;--card:#16211b;--ink:#e8efea;--mute:#93a59b;--line:#263229;--accent:#4cc79a;--accent-soft:#17342a;--done:#142a21;--warn:#f0b35a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:18px 16px 40px}
+h1{font-size:22px;font-weight:800;margin:6px 0 14px;letter-spacing:-.01em}
+.tabs{display:flex;gap:6px;background:var(--line);padding:4px;border-radius:12px;margin-bottom:14px}
+.tab{flex:1;border:0;background:transparent;color:var(--mute);font:inherit;font-weight:600;padding:10px 8px;border-radius:9px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
+.big-label{color:var(--mute);font-size:13px}
+.big{font-size:32px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:2px 0 10px}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar>i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .35s ease}
+.meta{display:flex;justify-content:space-between;gap:8px;margin-top:8px;color:var(--mute);font-size:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.stat{background:var(--bg);border-radius:12px;padding:10px 12px}
+.stat b{display:block;font-size:15px;font-variant-numeric:tabular-nums}
+.stat span{color:var(--mute);font-size:12px}
+.lunas{display:none;margin-top:14px;background:var(--accent-soft);color:var(--accent);border-radius:12px;padding:12px 14px;font-weight:700}
+.lunas.show{display:block}
+.lunas small{display:block;font-weight:500;color:var(--ink);margin-top:2px}
+.actions{display:flex;gap:8px;margin-bottom:10px}
+.btn{flex:1;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:600;font-size:13px;padding:10px;border-radius:10px;cursor:pointer}
+.btn:focus-visible,.tab:focus-visible,.row:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+ul{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.row{display:flex;align-items:center;gap:12px;padding:13px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .2s}
+.row:last-child{border-bottom:0}
+.row.on{background:var(--done)}
+.row input{position:absolute;opacity:0;pointer-events:none}
+.box{flex:none;width:24px;height:24px;border-radius:7px;border:2px solid var(--mute);display:grid;place-items:center;transition:all .15s}
+.row.on .box{background:var(--accent);border-color:var(--accent)}
+.box svg{width:14px;height:14px;stroke:#fff;stroke-width:3;fill:none;opacity:0}
+.row.on .box svg{opacity:1}
+.info{flex:1;min-width:0}
+.info b{display:block;font-weight:600}
+.info span{color:var(--mute);font-size:12.5px}
+.row.on .info b{text-decoration:line-through;text-decoration-color:var(--mute);color:var(--mute)}
+.amt{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.tag{font-size:11px;font-weight:700;color:var(--warn);margin-left:6px}
+.btn{display:flex;align-items:center;justify-content:center;text-decoration:none;min-height:44px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#06231a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#06231a}}
+.copybox{width:100%;height:110px;margin-bottom:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;font-size:13px;padding:10px}
+.copybox[hidden]{display:none}
+.rek .bank{font-weight:800;color:var(--accent);font-size:18px;margin-top:2px}
+.rek .rekno{font-size:30px;font-weight:800;letter-spacing:.04em;font-variant-numeric:tabular-nums;margin:2px 0;user-select:all;-webkit-user-select:all}
+.rek .rekname{color:var(--mute);font-weight:600;margin-bottom:12px}
+.rek .btn{width:100%;flex:none}
+.note{color:var(--mute);font-size:12px;text-align:center;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Xiaomi 15T Pro</h1>
+  <div class="tabs" role="tablist" id="tabs"></div>
+
+  <div class="card">
+    <div class="big-label">Sudah dibayar</div>
+    <div class="big" id="paid">Rp0</div>
+    <div class="bar"><i id="fill"></i></div>
+    <div class="meta"><span id="count"></span><span id="pct"></span></div>
+    <div class="grid">
+      <div class="stat"><b id="remain">-</b><span>Sisa yang harus dibayar</span></div>
+      <div class="stat"><b id="total">-</b><span>Total pembayaran</span></div>
+      <div class="stat"><b id="next">-</b><span>Jatuh tempo berikutnya</span></div>
+      <div class="stat"><b id="per">-</b><span>Cicilan per bulan</span></div>
+    </div>
+    <div class="lunas" id="lunas">Lunas! Semua pembayaran selesai.<small id="lunasTotal"></small></div>
+  </div>
+
+  <div class="card rek">
+    <div class="big-label">Transfer pembayaran ke</div>
+    <div class="bank">BCA</div>
+    <div class="rekno" id="rekno">6151000425</div>
+    <div class="rekname">a.n. BISMI MUSTOFAH</div>
+    <button class="btn" id="copyrek">Salin no. rekening</button>
+  </div>
+
+  <div class="actions">
+    <button class="btn" id="all">Centang semua</button>
+    <button class="btn" id="reset">Kosongkan semua</button>
+  </div>
+  <div class="actions">
+    <button class="btn primary" id="share">Bagikan status</button>
+    <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Kirim via WhatsApp</a>
+  </div>
+  <textarea class="copybox" id="copybox" readonly hidden aria-label="Teks status untuk disalin"></textarea>
+  <ul id="list"></ul>
+  <p class="note">Centang tersimpan otomatis di perangkat ini. Setiap orang yang membuka tautan punya catatan sendiri.</p>
+</div>
+
+<script>
+var BULAN=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+var PLANS=[
+ {id:"p18",name:"18 Bulan",harga:10000000,dp:3000000,n:18,amt:388889,last:388887},
+ {id:"p24",name:"24 Bulan",harga:10500000,dp:3150000,n:24,amt:306250,last:306250}
+];
+function rp(n){return "Rp"+String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,".");}
+function build(p){
+  var items=[{label:"DP 30%",sub:"Uang muka",amt:p.dp,due:null}];
+  var y=2026,m=11;
+  for(var i=1;i<=p.n;i++){
+    items.push({label:"Cicilan ke-"+i,sub:"16 "+BULAN[m]+" "+y,amt:i===p.n?p.last:p.amt,due:new Date(y,m,16)});
+    m++; if(m>11){m=0;y++;}
+  }
+  return items;
+}
+var state={}, cur=0;
+function load(){try{var s=localStorage.getItem("cicilan-v1");if(s)state=JSON.parse(s)||{};}catch(e){state={};}}
+function save(){try{localStorage.setItem("cicilan-v1",JSON.stringify(state));}catch(e){}}
+function checked(p){return state[p.id]||(state[p.id]=[]);}
+var $=function(id){return document.getElementById(id);};
+var CHECK='<svg viewBox="0 0 24 24"><path d="M4 12l5 5 11-11"/></svg>';
+
+function renderTabs(){
+  var t=$("tabs");t.innerHTML="";
+  PLANS.forEach(function(p,i){
+    var b=document.createElement("button");
+    b.className="tab";b.setAttribute("role","tab");b.setAttribute("aria-selected",i===cur);
+    b.textContent="Paket "+p.name;
+    b.onclick=function(){cur=i;renderTabs();render();};
+    t.appendChild(b);
+  });
+}
+function render(){
+  var p=PLANS[cur],items=build(p),ck=checked(p);
+  var list=$("list");list.innerHTML="";
+  var today=new Date();today.setHours(0,0,0,0);
+  var paid=0,done=0,nextItem=null;
+  items.forEach(function(it,idx){
+    var on=ck.indexOf(idx)>-1;
+    if(on){paid+=it.amt;done++;}
+    else if(!nextItem)nextItem=it;
+    var late=!on&&it.due&&it.due<today;
+    var li=document.createElement("li");
+    var lab=document.createElement("label");
+    lab.className="row"+(on?" on":"");
+    lab.innerHTML='<input type="checkbox"'+(on?" checked":"")+'><span class="box">'+CHECK+'</span>'+
+      '<span class="info"><b>'+it.label+(late?'<span class="tag">TERLAMBAT</span>':'')+'</b><span>'+it.sub+'</span></span>'+
+      '<span class="amt">'+rp(it.amt)+'</span>';
+    lab.querySelector("input").onchange=function(e){
+      var a=checked(p),k=a.indexOf(idx);
+      if(e.target.checked&&k<0)a.push(idx);
+      if(!e.target.checked&&k>-1)a.splice(k,1);
+      save();render();
+    };
+    li.appendChild(lab);list.appendChild(li);
+  });
+  var total=p.harga,pct=Math.round(paid/total*100);
+  $("paid").textContent=rp(paid);
+  $("fill").style.width=(paid/total*100)+"%";
+  $("count").textContent=done+" dari "+items.length+" pembayaran";
+  $("pct").textContent=pct+"%";
+  $("remain").textContent=rp(total-paid);
+  $("total").textContent=rp(total);
+  $("per").textContent=rp(p.amt);
+  $("next").textContent=nextItem?(nextItem.due?nextItem.sub:"DP belum dibayar"):"Selesai";
+  var all=done===items.length;
+  $("lunas").className="lunas"+(all?" show":"");
+  $("wa").href="https://wa.me/?text="+encodeURIComponent(summary());
+  $("copybox").hidden=true;
+  if(all)$("lunasTotal").textContent="Total terbayar: "+rp(paid)+" (DP "+rp(p.dp)+" + cicilan "+rp(p.harga-p.dp)+")";
+}
+function summary(){
+  var p=PLANS[cur],items=build(p),ck=checked(p),paid=0,next=null;
+  items.forEach(function(it,i){if(ck.indexOf(i)>-1)paid+=it.amt;else if(!next)next=it;});
+  return "Status cicilan - Paket "+p.name+"\n"+
+    "Terbayar: "+rp(paid)+" dari "+rp(p.harga)+" ("+Math.round(paid/p.harga*100)+"%)\n"+
+    "Sisa: "+rp(p.harga-paid)+"\n"+
+    "Pembayaran: "+ck.length+" dari "+items.length+"\n"+
+    (next?"Berikutnya: "+(next.due?next.label+" - "+next.sub:"DP")+" ("+rp(next.amt)+")":"LUNAS");
+}
+$("share").onclick=function(){
+  var t=summary(),btn=$("share"),box=$("copybox");
+  function manual(){box.value=t;box.hidden=false;box.focus();box.select();}
+  if(navigator.share){navigator.share({title:"Status cicilan",text:t}).catch(function(){});return;}
+  try{navigator.clipboard.writeText(t).then(function(){
+    btn.textContent="Tersalin";setTimeout(function(){btn.textContent="Bagikan status";},1800);
+  },manual);}catch(e){manual();}
+};
+$("all").onclick=function(){var p=PLANS[cur];state[p.id]=build(p).map(function(_,i){return i;});save();render();};
+$("copyrek").onclick=function(){
+  var b=$("copyrek"),n="6151000425";
+  function back(){setTimeout(function(){b.textContent="Salin no. rekening";},2000);}
+  function sel(){
+    try{var r=document.createRange();r.selectNodeContents($("rekno"));var s=window.getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}
+    b.textContent="Nomor terpilih, tekan salin";back();
+  }
+  try{navigator.clipboard.writeText(n).then(function(){b.textContent="Tersalin";back();},sel);}catch(e){sel();}
+};
+var resetTimer=null;
+$("reset").onclick=function(){
+  var b=$("reset");
+  if(!resetTimer){
+    b.textContent="Hapus semua centang? Ketuk lagi";
+    resetTimer=setTimeout(function(){resetTimer=null;b.textContent="Kosongkan semua";},3000);
+    return;
+  }
+  clearTimeout(resetTimer);resetTimer=null;b.textContent="Kosongkan semua";
+  PLANS.forEach(function(p){state[p.id]=[];});save();render();
+};
+load();renderTabs();render();
+</script>
+</body>
+</html>
